@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 import InterestCalculator from './components/interest-calculator';
 import './index.css';
 
 ReactDOM.render(
-    <InterestCalculator />,
-    document.getElementById('root')
+  <Provider store={store}>
+    <InterestCalculator />
+  </Provider>,
+  document.getElementById('root')
 );
